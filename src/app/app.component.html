@@ -1,5 +1,21 @@
+<h1>Class & Style</h1>
+<input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name" />
+<p class="message-error" [class.invalid]="nameInput2.invalid">El campo es requerido</p>
+<label>Nombre</label>
+<input type="text" required #nameInput3="ngModel" [(ngModel)]="person.name">
+<p [style.font-style]="nameInput3.invalid ? 'italic' : 'normal' ">Texto texto texto</p>
+<div class="styles">
+  <div>
+    <input type="text" [(ngModel)]="widthImg">
+  </div>
+  <div>
+    <img [src]="person.avatar" [style.width.px]="widthImg" />
+  </div>
+</div>
+<hr />
+
 <h1>ngSwitch</h1>
-<input type="text" required [(ngModel)]="person.name">
+<input type=" text" required [(ngModel)]="widthImg">
 <div [ngSwitch]="person.name">
   <p *ngSwitchCase=" 'juan' ">
     La persona es Juan
@@ -64,17 +80,23 @@
 <button (click)="increaseAge()">Age ++</button>
 <div class="box" (scroll)="onScroll($event)">
   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque distinctio error a atque? Quam, libero
-    distinctio. Sequi maxime atque minus laudantium veniam ipsa totam. Pariatur qui explicabo facere esse magnam.Lorem
+    distinctio. Sequi maxime atque minus laudantium veniam ipsa totam. Pariatur qui explicabo facere esse
+    magnam.Lorem
     ipsum dolor, sit amet consectetur adipisicing elit. Doloremque distinctio error a atque? Quam, libero
-    distinctio. Sequi maxime atque minus laudantium veniam ipsa totam. Pariatur qui explicabo facere esse magnam.Lorem
+    distinctio. Sequi maxime atque minus laudantium veniam ipsa totam. Pariatur qui explicabo facere esse
+    magnam.Lorem
     ipsum dolor, sit amet consectetur adipisicing elit. Doloremque distinctio error a atque? Quam, libero
-    distinctio. Sequi maxime atque minus laudantium veniam ipsa totam. Pariatur qui explicabo facere esse magnam.Lorem
+    distinctio. Sequi maxime atque minus laudantium veniam ipsa totam. Pariatur qui explicabo facere esse
+    magnam.Lorem
     ipsum dolor, sit amet consectetur adipisicing elit. Doloremque distinctio error a atque? Quam, libero
-    distinctio. Sequi maxime atque minus laudantium veniam ipsa totam. Pariatur qui explicabo facere esse magnam.Lorem
+    distinctio. Sequi maxime atque minus laudantium veniam ipsa totam. Pariatur qui explicabo facere esse
+    magnam.Lorem
     ipsum dolor, sit amet consectetur adipisicing elit. Doloremque distinctio error a atque? Quam, libero
-    distinctio. Sequi maxime atque minus laudantium veniam ipsa totam. Pariatur qui explicabo facere esse magnam.Lorem
+    distinctio. Sequi maxime atque minus laudantium veniam ipsa totam. Pariatur qui explicabo facere esse
+    magnam.Lorem
     ipsum dolor, sit amet consectetur adipisicing elit. Doloremque distinctio error a atque? Quam, libero
-    distinctio. Sequi maxime atque minus laudantium veniam ipsa totam. Pariatur qui explicabo facere esse magnam.</p>
+    distinctio. Sequi maxime atque minus laudantium veniam ipsa totam. Pariatur qui explicabo facere esse magnam.
+  </p>
 </div>
 <p>Nombre {{ person.name }}</p>
 <input type="text" [value]="person.name" (keyup)="changeName($event)" />
